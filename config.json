@@ -1,0 +1,19 @@
+{
+  "heat": {
+    "weights": {"fl_volume": 0.25, "fl_trades": 0.20, "amm_create": 0.15, "unique_traders": 0.15, "turnover": 0.15, "retail": 0.10}
+  },
+  "macro": {
+    "pairs": [
+      {"symbol": "BTCUSDT", "label": "BTC/USD", "weight": 0.40},
+      {"symbol": "XRPUSDT", "label": "XRP/USD", "weight": 0.35},
+      {"symbol": "XRPBTC", "label": "XRP/BTC", "weight": 0.25}
+    ],
+    "smooth_days": 7,
+    "points": {
+      "above_sma200": 15, "sma50_above_sma200": 10, "above_ema21": 10, "ema21_rising": 5,
+      "macd_above_signal": 15, "macd_hist_rising": 10, "macd_positive": 10,
+      "rsi_healthy": 25, "rsi_neutral": 12
+    }
+  },
+  "verdict": {"risk_on": 60, "risk_off": 40, "heat_cold": 40, "heat_hot": 85}
+}

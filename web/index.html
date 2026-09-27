@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>XRPL Risk Radar</title>
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="app.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+</head>
+<body>
+<main>
+  <header class="top">
+    <div><h1>XRPL Risk Radar</h1><div class="asof" id="asof"></div></div>
+    <div class="seg" id="lang"><button data-lang="en">EN</button><button data-lang="es">ES</button></div>
+  </header>
+
+  <nav class="tabs" id="tabs" role="tablist">
+    <button role="tab" data-tab="overview" data-i18n="tabs.overview"></button>
+    <button role="tab" data-tab="macro" data-i18n="tabs.macro"></button>
+    <button role="tab" data-tab="meme" data-i18n="tabs.meme"></button>
+  </nav>
+
+  <section class="tabpanel" data-tab="overview">
+    <div class="card verdict" id="verdict"></div>
+  </section>
+
+  <section class="tabpanel" data-tab="macro">
+    <h2 data-i18n="macro.title"></h2>
+    <p class="note" data-i18n="macro.note"></p>
+    <div class="cards3" id="pairs"></div>
+  </section>
+
+  <section class="tabpanel" data-tab="meme">
+    <h2 data-i18n="heat.title"></h2>
+    <div class="card" id="heat"></div>
+    <div class="row">
+      <h3 data-i18n="drivers.title"></h3>
+      <div class="seg" id="mode"><button data-mode="value" data-i18n="drivers.value"></button><button data-mode="chart" data-i18n="drivers.chart"></button></div>
+    </div>
+    <div class="cards3" id="drivers" data-mode="value"></div>
+    <h2 data-i18n="platforms.title"></h2>
+    <div class="card" id="platforms"></div>
+  </section>
+
+  <footer>
+    <a href="https://xrpl.to">Data by xrpl.to</a> · <span data-i18n="footer.prices"></span> · <span data-i18n="footer.disclaimer"></span>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

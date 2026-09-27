@@ -1,0 +1,88 @@
+/* Design tokens. The whole look of the app lives here: replace this file to apply a brand (Design.md). */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  color-scheme: light;
+  --font-sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+
+  --bg: #f3f4f7;
+  --surface: #ffffff;
+  --surface-2: #eceef3;
+  --line: #dfe2e9;
+  --text: #141821;
+  --muted: #5b6272;
+  --accent: #2e62d9;
+
+  /* semantic */
+  --pos: #16874a;
+  --neg: #cf3439;
+  --warn: #b0761a;
+
+  /* heat zones */
+  --cold: #3874db;
+  --mild: #bf9420;
+  --hot: #dd6412;
+  --euphoria: #cf3439;
+
+  /* chart series */
+  --series-1: #dd6412;
+  --series-2: #2e62d9;
+  --series-3: #16874a;
+  --series-4: #8a4fd6;
+  --series-5: #bf9420;
+  --series-6: #139a95;
+
+  --radius: 10px;
+  --gap: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0e1015;
+    --surface: #161920;
+    --surface-2: #1e222b;
+    --line: #272b35;
+    --text: #e7e9ee;
+    --muted: #8e95a3;
+    --accent: #6d97f5;
+    --pos: #3ec57b;
+    --neg: #f0575b;
+    --warn: #e5ac45;
+    --cold: #5b93f0;
+    --mild: #e0bb45;
+    --hot: #f5823a;
+    --euphoria: #f0575b;
+    --series-1: #f5823a;
+    --series-2: #6d97f5;
+    --series-3: #3ec57b;
+    --series-4: #b085f0;
+    --series-5: #e0bb45;
+    --series-6: #3cc2bc;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e1015;
+  --surface: #161920;
+  --surface-2: #1e222b;
+  --line: #272b35;
+  --text: #e7e9ee;
+  --muted: #8e95a3;
+  --accent: #6d97f5;
+  --pos: #3ec57b;
+  --neg: #f0575b;
+  --warn: #e5ac45;
+  --cold: #5b93f0;
+  --mild: #e0bb45;
+  --hot: #f5823a;
+  --euphoria: #f0575b;
+  --series-1: #f5823a;
+  --series-2: #6d97f5;
+  --series-3: #3ec57b;
+  --series-4: #b085f0;
+  --series-5: #e0bb45;
+  --series-6: #3cc2bc;
+}
